@@ -11,21 +11,21 @@ function kern(selector) {
     get_all_text_nodes(els[i], nodes)
   }
 
-  for(var n = 0, len = nodes.length; n < len; ++i) {
+  // for(var n = 0, len = nodes.length; n < len; ++i) {
 
-    var old_text = nodes[n].textContent
-      , new_text = nodes[n].textContent.split('')
+  //   var old_text = nodes[n].textContent
+  //     , new_text = nodes[n].textContent.split('')
 
-    for(var i = 0, len = new_text.length; i < len; ++i) {
-      new_text[i] = '<span data-letter="' + new_text[i] + '"</span>'
-    }
+  //   for(var i = 0, len = new_text.length; i < len; ++i) {
+  //     new_text[i] = '<span data-letter="' + new_text[i] + '"</span>'
+  //   }
 
-    new_text = new_text.join('')
+  //   new_text = new_text.join('')
 
-    n.innerHTML = new_text
-  }
+  //   n.innerHTML = new_text
+  // }
 
-  return els
+  return nodes
 }
 
 function get_all_text_nodes(el, nodes) {
